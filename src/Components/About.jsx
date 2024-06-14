@@ -1,83 +1,44 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
 import React from "react";
-
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
+import '../About.css'; // Import the CSS file for styles and animations
 import image from "../images/motion-background.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
-/**
- * Sort description that expands on your title on the Home component.
- */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm Husen, a devoted lover of all things computer-related. My passion for technology has led me to become the first Microsoft Learn Student Ambassador in my region, where I engage with a community of like-minded enthusiasts to share knowledge and explore the latest in tech. Additionally, I am a proud member of the IEEE Computer Society, which allows me to stay at the forefront of computing advancements and contribute to the evolution of technology. Beyond my ambassadorial and society roles, I am also a Backend Developer at Fawri, where I work on developing and optimizing backend services for our e-commerce platform. Through these diverse roles, I strive to leverage my expertise to inspire others and drive innovation in the tech world.";
 
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Python",
+  "Postman",
+  "PostgreSQL",
+  "Fast-API",
+  "C",
+  "Java",
+  "MySql",
+  "Swift",
+  "Verilog",
+  ""
+
 ];
 
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I am passionate about solving problems in new creative ways to drive innovation.";
 
 const About = () => {
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
-      <div
-        style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
-        }}
-      >
-        <h2>About Myself</h2>
-        <p className="large">{description}</p>
-        <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
+    <section className="about-section" id="about">
+      <img className="background-image" src={image} alt={imageAltText} />
+      <div className="about-content">
+        <h2 className="animate-fade-in">About Myself</h2>
+        <p className="description animate-slide-in">{description}</p>
+        <hr className="animate-expand" />
+        <ul className="skills-list animate-fade-in">
           {skillsList.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>
-        <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <hr className="animate-expand" />
+        <p className="quote animate-slide-in">{detailOrQuote}</p>
       </div>
     </section>
   );

@@ -1,0 +1,15 @@
+#footer {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .socialIcon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
